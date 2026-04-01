@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Cobuild\Impersonation\Http\Controllers\ImpersonationController;
+use Henrymanyonyi\Impersonation\Http\Controllers\ImpersonationController;
+use Henrymanyonyi\Impersonation\Http\Middleware\AllowImpersonation;
 
-Route::middleware(['web', 'auth'])->group(function () {
+Route::middleware(['web', 'auth', AllowImpersonation::class])->group(function () {
 
     Route::post('/impersonate/{user}', [ImpersonationController::class, 'start'])
         ->name('impersonate.start');
