@@ -1,0 +1,23 @@
+{
+  "name": "henrymanyonyi/laravel-impersonation",
+  "description": "Allows admin users to log in as client accounts securely. This package is designed to work seamlessly with Laravel Jetstream and Livewire stacks.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Henrymanyonyi\\Impersonation\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Henrymanyonyi\\Impersonation\\ImpersonationServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^10.0|^11.0",
+    "illuminate/auth": "^10.0|^11.0"
+  }
+}
